@@ -1,0 +1,8 @@
+BEGIN
+x := 10;
+y := 20;
+WRITE (x, y);
+x := y;
+y := -100;
+WRITE (x, y);
+END

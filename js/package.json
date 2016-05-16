@@ -1,0 +1,14 @@
+{
+  "name": "tiny-lang",
+  "version": "1.0.0",
+  "description": "A compiler and interpreter for the Tiny language",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Cluck",
+  "license": "MIT",
+  "dependencies": {
+    "prompt-sync": "^4.0.4"
+  }
+}

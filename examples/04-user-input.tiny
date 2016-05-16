@@ -1,0 +1,4 @@
+BEGIN
+READ (x, y);
+WRITE (x, y, x + y);
+END

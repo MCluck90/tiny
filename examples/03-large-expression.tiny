@@ -1,0 +1,5 @@
+BEGIN
+a := 1;
+b := 2;
+WRITE ((a + b) - (a + b) - ((a + b) + (b + a)));
+END
