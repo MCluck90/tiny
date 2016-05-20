@@ -1,4 +1,6 @@
 import 'package:tiny_lang/scanner.dart';
+import 'package:tiny_lang/parser.dart';
+import 'package:tiny_lang/ast.dart';
 
 void main() {
   Scanner scanner = new Scanner(
@@ -9,8 +11,8 @@ void main() {
     'WRITE (x, y + z, a - b)'
     'END'
   );
-  while (scanner.token.type != TokenType.eof) {
-    print(scanner.token);
-    scanner.next();
-  }
+
+  Parser parser = new Parser(scanner);
+  AST ast = parser.parse();
+  print(ast);
 }
