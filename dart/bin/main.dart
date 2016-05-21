@@ -1,21 +1,16 @@
+import 'dart:io';
+
 import 'package:tiny_lang/scanner.dart';
 import 'package:tiny_lang/parser.dart';
 import 'package:tiny_lang/ast.dart';
 
-void main() {
-  Scanner scanner = new Scanner(
-    'BEGIN'
-    'x := 2;'
-    'READ (y);'
-    'READ (y, z);'
-    'WRITE (x);'
-    'WRITE (1);'
-    'WRITE (x, 1, y + z);'
-    'x := x + y - z;'
-    'y := (x + y) - (z - (x - y));'
-    'END'
-  );
-
+main(List<String> arguments) async {
+  if (arguments.length < 1) {
+    print('Usage: dart bin/main.dart path-to-file');
+    return;
+  }
+  
+  Scanner scanner = new Scanner(await (new File(arguments[0]).readAsString()));
   Parser parser = new Parser(scanner);
   AST ast = parser.parse();
   print(ast);
