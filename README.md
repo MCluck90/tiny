@@ -11,5 +11,5 @@ that the compiler will output.
 
 List of languages:
 
-  1. JavaScript (compiler and interpreter)
-  2. Dart (scanner complete, parser complete, interpreter in progress)
+  1. JavaScript (interpreter and compiler)
+  2. Dart (interpreter complete, compiler in progress)
