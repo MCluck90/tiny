@@ -88,7 +88,7 @@ class Write extends ASTNode {
     for (int i = 0; i < expressions.length; i++) {
       result += '${expressions[i].toString(depth + 1)}\n\n';
     }
-    return '$result$tabs]';
+    return '$result$tabs]\n';
   }
 }
 
